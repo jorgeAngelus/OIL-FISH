@@ -7,7 +7,6 @@ const voluntarios=[];
 
 router.get('/',(req,res)=>{
     res.sendFile('voluntario.html',{root: v})
-    //res.render('voluntario.html');
 })
 
 router.get('/voluntario',(req,res)=>{
