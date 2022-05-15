@@ -10,8 +10,8 @@ const port = 3000
 })*/
 
 async function main(){
-    await app.listen(3000);
-    console.log("Escucha por el puerto 3000");
+    await app.listen(app.get('port'));
+    console.log("server port", app.get('port'));
 }
 
 main();
