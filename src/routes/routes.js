@@ -34,6 +34,8 @@ router.post('/voluntario.html',(req,res)=>{
     }    
     voluntarios.push(newvoluntario);
 
+    const json_voluntarios = JSON.stringify(voluntarios);
+    fs.writeFileSync('src/Voluntarios.json',json_voluntarios,'utf-8');
 
     console.log(voluntarios);
     res.send('Recibido'); 
