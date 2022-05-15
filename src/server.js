@@ -1,10 +1,9 @@
 const app = require('./app');
-
 const port = 3000
 
-app.get('/',(req,res) => {
+/*app.get('/',(req,res) => {
     res.send('OIL FISH')
-})
+})*/
 
 /*app.listen(port,()=>{
     console.log(`escucha por el puerto ${port}`)
