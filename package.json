@@ -1,0 +1,11 @@
+{
+  "name": "oil-fish",
+  "version": "1.0.0",
+  "description": "parte de Backend de Aplicación OIL FISH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FISHES OF CHANGE",
+  "license": "ISC"
+}
