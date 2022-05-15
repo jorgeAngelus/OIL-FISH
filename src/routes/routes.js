@@ -4,20 +4,12 @@ const {Router} = require('express');
 const { append } = require('express/lib/response');
 const router = Router();
 
-
-const voluntarios=[];
-
-/*router.get('/',(req,res)=>{
-    res.sendFile('index.html',{root: public});
-})*/
+const json_voluntarios = fs.readFileSync('src/Voluntarios.json','utf-8')
+const voluntarios = JSON.parse(json_voluntarios);
 
 router.get("/",(req,res)=>{
     res.sendFile(__dirname)
 })
-
-/*router.get('/voluntario.html',(req,res)=>{
-    res.render('voluntario');
-})*/
 
 router.post('/voluntario.html',(req,res)=>{
     const {Name,Apellido,Email,Phone,Birthday} = req.body;
