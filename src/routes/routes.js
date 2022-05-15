@@ -1,3 +1,4 @@
+const fs = require('fs')
 const path = require('path');
 const {Router} = require('express');
 const { append } = require('express/lib/response');
@@ -19,9 +20,24 @@ router.get("/",(req,res)=>{
 })*/
 
 router.post('/voluntario.html',(req,res)=>{
-    //voluntarios.push(req.body)
-    console.log(req.body);
+    const {Name,Apellido,Email,Phone,Birthday} = req.body;
+    if(!Name || !Apellido || !Email || !Phone || !Birthday){
+        res.status(400).send('No debe haber campos vacios')
+        return;
+    }
+    let newvoluntario = {
+        Name,
+        Apellido,
+        Email,
+        Phone,
+        Birthday
+    }    
+    voluntarios.push(newvoluntario);
+
+
+    console.log(voluntarios);
     res.send('Recibido'); 
+
 })
 
 module.exports = router;
